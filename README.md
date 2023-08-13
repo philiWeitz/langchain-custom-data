@@ -4,6 +4,7 @@
 * [Anaconda](https://www.anaconda.com/)
 
 ## How to run it
+1. Copy the .env-sample to .env and fill in all variables
 1. Create python environment ```conda create -n ${PWD##*/} python=3.10```
-2. Install dependencies ```pip install -r requirements```
-3. Run example ```python main.py```
+1. Install dependencies ```pip install -r requirements```
+1. Run example ```python main.py```

@@ -1,3 +1,5 @@
 .env
 .keep
 .idea
+
+__pycache__

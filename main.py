@@ -1,7 +1,8 @@
 from chat_chain import get_chat_chain
+from qa_chain import get_qa_chain
 
 questions = [
-    "Who are chaos's partners? Can you name some companies?",
+    "Who are chaos's partners?",
     "How many employees does chaos have?",
     "Do you know the color 'blue'?",
     "What are it's values?",
@@ -9,7 +10,8 @@ questions = [
     "What's the yearly revenue?"
 ]
 
-chain = get_chat_chain()
+# chain = get_chat_chain()
+chain = get_qa_chain()
 
 for question in questions:
     print(f"Human: {question}")
