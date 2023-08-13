@@ -24,7 +24,7 @@ def get_from_local_knowledge_base():
     for doc in tail(documents):
         document += doc
 
-    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+    text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
     texts = text_splitter.split_documents(document)
 
     embeddings = OpenAIEmbeddings()

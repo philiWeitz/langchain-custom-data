@@ -25,14 +25,18 @@ PROMPT = PromptTemplate(
 
 
 def get_qa_chain(model_name="gpt-3.5-turbo"):
-    llm = ChatOpenAI(temperature=0, model_name=model_name)
+    llm = ChatOpenAI(temperature=0.1, model_name=model_name)
 
     with open(EMBEDDINGS_FILE, "rb") as f:
         vector_store = pickle.load(f)
 
+        retriever = vector_store.as_retriever(
+            search_type="mmr", search_kwargs={"k": 2, "lambda_mult": 0.75}
+        )
+
         return RetrievalQA.from_chain_type(
             llm=llm,
             chain_type="stuff",
-            retriever=vector_store.as_retriever(),
-            chain_type_kwargs={"prompt": PROMPT},
+            retriever=retriever,
+            chain_type_kwargs={"prompt": PROMPT}
         )
