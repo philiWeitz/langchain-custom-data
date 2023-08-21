@@ -13,8 +13,6 @@ from langchain.vectorstores import FAISS
 from scraper import Scraper
 
 URLS = [
-    "https://www.finder.fi/Kaavoitus+ja+maank%C3%A4yt%C3%B6nsuunnittelu/CHAOS+Architect+Oy/Helsinki/yhteystiedot/3122669",
-    "https://vainu.io/company/chaos-architects-oy-taloustiedot-ja-liikevaihto/7000255/yritystiedot",
     "https://chaosarchitects.com",
     "https://chaosarchitects.com/dashboards",
     "https://chaosarchitects.com/customer-cases",
