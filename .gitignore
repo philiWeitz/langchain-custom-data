@@ -1,5 +1,6 @@
 .env
 .keep
 .idea
+scraped_html
 
 __pycache__
